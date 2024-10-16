@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDebounce } from '../../customHook/useDebounce';
 
 export default function ItemSearchInput({
-  value,
+  value = "",
   onChange,
   placeholder,
   disabled = false,

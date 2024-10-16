@@ -12,7 +12,7 @@ export default function CategoryGridItem({ label, items }) {
     return !input || item?.title?.toLowerCase().includes(input.toLowerCase());
   };
 
-  const filteredItems = items?.filter(onFilter);
+  const filteredItems =items && items?.filter(onFilter);
 
   return (
     <div className="rounded-s flex h-72 flex-col bg-white p-4 align-middle shadow">

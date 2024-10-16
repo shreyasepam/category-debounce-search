@@ -1,5 +1,5 @@
 export const Conifg = {
-  url: 'https://dummyjson.com/products',
+  url: 'https://dummyjson.com/products?limit=100&skip=10&select=id,title,thumbnail,price,category',
 };
 
 export const groupedByCategory = (data) => {
