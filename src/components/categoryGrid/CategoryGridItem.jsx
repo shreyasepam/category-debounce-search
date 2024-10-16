@@ -12,7 +12,7 @@ export default function CategoryGridItem({ label, items }) {
     return !input || item?.title?.toLowerCase().includes(input.toLowerCase());
   };
 
-  const filteredItems =items && items?.filter(onFilter);
+  const filteredItems = items && items?.filter(onFilter);
 
   return (
     <div className="rounded-s flex h-72 flex-col bg-white p-4 align-middle shadow">
@@ -28,7 +28,11 @@ export default function CategoryGridItem({ label, items }) {
       <ul className="mt-2 overflow-auto">
         {filteredItems?.length > 0 ? (
           filteredItems.map((item) => (
-            <li key={item.id} className="mt-2 overflow-hidden whitespace-nowrap overflow-ellipsis">
+            <li
+              key={item.id}
+              className="mt-2 overflow-hidden overflow-ellipsis whitespace-nowrap"
+              title={item.title}
+            >
               {item.title}
             </li>
           ))
