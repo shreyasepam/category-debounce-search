@@ -12,7 +12,6 @@ export default function CategoryContainer() {
     try {
       const response = await fetch(Conifg.url);
       const data = await response.json();
-      console.log('data', data);
       if (data && data?.products && data?.products?.length > 0) {
         const groupData = groupedByCategory(data?.products);
         setProducts(groupData);
@@ -41,8 +40,6 @@ export default function CategoryContainer() {
     }
     setProducts(results);
   };
-
-  console.log('Asdasd', products);
 
   return (
     <CategoryContext.Provider value={{ products }}>
