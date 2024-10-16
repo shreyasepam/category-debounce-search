@@ -28,7 +28,7 @@ export default function CategoryGridItem({ label, items }) {
       <ul className="mt-2 overflow-auto">
         {filteredItems?.length > 0 ? (
           filteredItems.map((item) => (
-            <li key={item.id} className="mt-2">
+            <li key={item.id} className="mt-2 overflow-hidden whitespace-nowrap overflow-ellipsis">
               {item.title}
             </li>
           ))
